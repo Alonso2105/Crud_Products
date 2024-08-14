@@ -227,6 +227,7 @@ h1 {
   margin-right: 95px;
 }
 
+/* Estilo para remover configuracion visual de tag button_to" */
 .button_to {
   display: inline;
   padding: 0 !important;
