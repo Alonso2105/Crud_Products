@@ -8,13 +8,14 @@
   <p><strong>Quantity:</strong> <%= @product.quantity %></p>
   <p><strong>Category:</strong> <%= @product.category %></p>
   <p><strong>Image:</strong> 
-  <% if @product.image.present? %>
-    <%= image_tag(@product.image, size: "150x150") %>
-  <% else %>
-    <span>No image available</span>
-  <% end %>
+    <% if @product.avatar.attached? %>
+      <%= image_tag(url_for(@product.avatar), size: "50x50")%>
+    <% elsif @product.image.present? %>
+      <%= image_tag(@product.image, size: "50x50") %>
+    <% else %>
+      <span>No image available</span>
+    <% end %>
   </p>
-
 </div>
 
 <div class="actions">
@@ -22,4 +23,3 @@
   <%= link_to 'Back', products_path, class: 'btn btn-secondary' %>
   <%= button_to 'Delete', @product, method: :delete, class: 'btn btn-danger' %>
 </div>
-

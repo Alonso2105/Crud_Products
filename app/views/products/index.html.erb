@@ -27,13 +27,14 @@
         <td><%= product.sku %></td>
         <td><%= product.is_seasonal ? 'Yes' : 'No' %></td>
         <td>
-          <% if product.image.present? %>
+          <% if product.avatar.attached? %>
+            <%= image_tag(url_for(product.avatar), size: "50x50")%>
+          <% elsif product.image.present? %>
             <%= image_tag(product.image, size: "50x50") %>
-              <% else %>
+          <% else %>
             <span>No image available</span>
           <% end %>
         </td>
-
         <td><%= product.quantity %></td>
         <td><%= product.category %></td>
         <td>
