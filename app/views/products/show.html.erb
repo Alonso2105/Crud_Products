@@ -1,10 +1,25 @@
-<p style="color: green"><%= notice %></p>
+<h1>Product Details</h1>
 
-<%= render @product %>
+<div class="product-details">
+  <p><strong>Name:</strong> <%= @product.name %></p>
+  <p><strong>Price:</strong> <%= number_to_currency(@product.price) %></p>
+  <p><strong>SKU:</strong> <%= @product.sku %></p>
+  <p><strong>Seasonal:</strong> <%= @product.is_seasonal ? 'Yes' : 'No' %></p>
+  <p><strong>Quantity:</strong> <%= @product.quantity %></p>
+  <p><strong>Category:</strong> <%= @product.category %></p>
+  <p><strong>Image:</strong> 
+  <% if @product.image.present? %>
+    <%= image_tag(@product.image, size: "150x150") %>
+  <% else %>
+    <span>No image available</span>
+  <% end %>
+  </p>
 
-<div>
-  <%= link_to "Edit this product", edit_product_path(@product) %> |
-  <%= link_to "Back to products", products_path %>
-
-  <%= button_to "Destroy this product", @product, method: :delete %>
 </div>
+
+<div class="actions">
+  <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-primary' %>
+  <%= link_to 'Back', products_path, class: 'btn btn-secondary' %>
+  <%= button_to 'Delete', @product, method: :delete, class: 'btn btn-danger' %>
+</div>
+

@@ -1,0 +1,234 @@
+/* Variables CSS (opcional) */
+:root {
+  --border-color: #ddd;
+  --danger-color: #dc3545;
+  --danger-color-hover: #c82333;
+  --dark-text: #333;
+  --font-size-base: 16px;
+  --font-size-large: 18px;
+  --light-bg: #f9f9f9;
+  --primary-color: #007bff;
+  --primary-color-hover: #0056b3;
+  --secondary-color: #6c757d;
+  --secondary-color-hover: #5a6268;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo de la tabla */
+.table {
+  border-collapse: collapse;
+  margin: auto;
+  width: 90%;
+}
+
+.table th, .table td {
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f4f4f4;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Estilo para la paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.pagination a,
+.pagination span {
+  border-radius: 5px;
+  color: #999;
+  display: block;
+  padding: 10px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Estilo general del formulario */
+form {
+  background-color: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+/* Estilo para los títulos */
+h1 {
+  color: var(--dark-text);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilo para los campos del formulario */
+.field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  color: var(--dark-text);
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.field input[type="text"],
+.field input[type="number"],
+.field input[type="file"],
+.field input[type="checkbox"],
+.field select,
+.field textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: var(--font-size-base);
+  padding: 10px;
+  width: 100%;
+}
+
+/* Estilo para los botones generales */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: var(--font-size-base);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+  margin-left: 10px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-color-hover);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.btn-danger:hover {
+  background-color: var(--danger-color-hover);
+}
+
+/* Estilo para los botones del formulario */
+.actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Estilo para los mensajes de error */
+#error_explanation {
+  background-color: #f8d7da;
+  border: 1px solid transparent;
+  border-color: #f5c6cb;
+  border-radius: 5px;
+  color: #721c24;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+#error_explanation h2 {
+  margin-top: 0;
+}
+
+#error_explanation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#error_explanation li {
+  margin-left: 20px;
+}
+
+/* Estilo para la vista de detalles del producto */
+.product-details {
+  background-color: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 20px auto;
+  max-width: 600px;
+  text-align: center;
+  padding: 20px;
+}
+
+.product-details p {
+  font-size: var(--font-size-large);
+  margin-bottom: 15px;
+}
+
+.product-details p strong {
+  color: var(--dark-text);
+}
+
+/* Estilo de la imagen en la vista de detalles */
+.product-details img {
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* Botones en la vista de detalles */
+.actions {
+  margin-top: 20px;
+  text-align: center;
+}
+/* Estilo para el contenedor del botón "New Product" */
+.button-container {
+  text-align: right; /* Alinea el botón al extremo derecho */
+  margin-right: 95px;
+}
+
+.button_to {
+  display: inline;
+  padding: 0 !important;
+  border: 0 !important;
+}
